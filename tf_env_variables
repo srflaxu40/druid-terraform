@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# For druid ansible stuffz:
+export TF_VAR_region="us-east-1"
+export TF_VAR_environment="<YOUR ENVIRONMENT>"
+
+export TF_VAR_aws_access_key_id=$AWS_ACCESS_KEY
+export TF_VAR_aws_secret_access_key=$AWS_SECRET_ACCESS_KEY
+
+export TF_VAR_az_one="us-east-1b"
+export TF_VAR_az_two="us-east-1c"
+
+# Route53 HOSTED ZONE ID
+export TF_VAR_zone_id="<HOSTED ZONE ID>"
+
+export TF_VAR_security_group_id="<SECURITY GROUP>"
+export TF_VAR_subnet_one="<SUBNET>"
+export TF_VAR_subnet_two="<SUBNET>"
+export TF_VAR_vpc_id="<VPC ID>"
+
+export TF_VAR_date=`date +%s`
+
+# Get AMIs per druid role / node:
+# Coordinator
+export TF_VAR_coordinator_ami=<PRE-BAKED AMI ID>
+export TF_VAR_coordinator_instance_type=m4.xlarge
+
+# Overlord
+export TF_VAR_overlord_ami=<PRE-BAKED AMI ID>
+export TF_VAR_overlord_instance_type=m4.xlarge
+
+# Broker
+export TF_VAR_broker_ami=<PRE-BAKED AMI ID>
+export TF_VAR_broker_instance_type=m4.xlarge
+
+# Historical
+export TF_VAR_historical_ami=<PRE-BAKED AMI ID>
+export TF_VAR_historical_instance_type=m4.xlarge
+
+# middleManager
+export TF_VAR_middleManager_ami=<PRE-BAKED AMI ID>
+export TF_VAR_middleManager_instance_type=m4.xlarge
+
+# Tranquility
+export TF_VAR_tranquility_ami=<PRE-BAKED AMI ID>
+export TF_VAR_tranquility_instance_type=m4.xlarge
+
+# Set domain names:
+export TF_VAR_zookeeper_dns_name="<YOUR ZOOKEEPER FQDN>"
+export TF_VAR_postgres_dns_name="<YOUR POSTGRES FQDN>"
+export TF_VAR_tld="com"
+export TF_VAR_domain_name="knepper"
+
